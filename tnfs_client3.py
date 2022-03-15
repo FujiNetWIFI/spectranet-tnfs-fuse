@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 # The MIT License
 #
@@ -32,11 +32,7 @@ import stat
 from time import localtime, strftime
 import shlex
 
-#DEFAULT_HOST = "vexed4.alioth.net"
-#DEFAULT_HOST = "fujinet.online"
-DEFAULT_HOST = "rasp4"
-# V1.0 server
-#DEFAULT_HOST = "nihirash.net"
+DEFAULT_HOST = "vexed4.alioth.net"
 
 # Timeout in seconds
 DEFAULT_TIMEOUT = 15
@@ -127,7 +123,7 @@ def getCstr(data, pos):
     return string, end + 1
 
 def fullPath(cwd, path):
-    # TODO Use pathlib?
+    # TODO May use pathlib
     result = os.path.normpath(f"{cwd}/{path}").replace("\\", "/") if path[0] != "/" else path
 
     ## http://stackoverflow.com/questions/7816818/why-doesnt-os-normapath-collapse-a-leading-double-slash
