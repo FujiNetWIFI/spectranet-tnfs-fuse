@@ -34,7 +34,7 @@ import shlex
 
 #DEFAULT_HOST = "vexed4.alioth.net"
 #DEFAULT_HOST = "fujinet.online"
-DEFAULT_HOST = "rasp4"
+DEFAULT_HOST = "fujinet.krion.io"
 # V1.0 server
 #DEFAULT_HOST = "nihirash.net"
 
@@ -139,7 +139,7 @@ def fullPath(cwd, path):
 
 # From tnfsd/directory.h
 class tnfs_diropt:
-    NO_FOLDERSFIRST = 0x01 
+    NO_FOLDERSFIRST = 0x01
     NO_SKIPHIDDEN = 0x02
     NO_SKIPSPECIAL = 0x04
     DIR_PATTERN = 0x08
@@ -169,7 +169,7 @@ def flagsToTNFS(flags):
         tnfs_flags |= tnfs_flag.O_WRONLY
     elif flags & 0x03 == os.O_RDWR:
         tnfs_flags |= tnfs_flag.O_RDWR
-    
+
     if flags & os.O_APPEND:
         tnfs_flags |= tnfs_flag.O_APPEND
     if flags & os.O_CREAT:
@@ -1160,7 +1160,7 @@ class Session:
                 contents.extend(entries)
         if handle is not None:
             self.CloseDir(handle)
-        
+
         return contents
 
     def GetFile(self, path):
