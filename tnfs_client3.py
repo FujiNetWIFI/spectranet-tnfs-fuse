@@ -34,7 +34,7 @@ import shlex
 
 #DEFAULT_HOST = "vexed4.alioth.net"
 #DEFAULT_HOST = "fujinet.online"
-DEFAULT_HOST = "fujinet.krion.io"
+DEFAULT_HOST = "rasp4"
 # V1.0 server
 #DEFAULT_HOST = "nihirash.net"
 
