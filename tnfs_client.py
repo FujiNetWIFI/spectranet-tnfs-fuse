@@ -63,7 +63,7 @@ def flagsToTNFS(flags):
 		tnfs_flags |= tnfs_flag.O_WRONLY
 	elif flags & 0x03 == os.O_RDWR:
 		tnfs_flags |= tnfs_flag.O_RDWR
-	
+
 	if flags & os.O_APPEND:
 		tnfs_flags |= tnfs_flag.O_APPEND
 	if flags & os.O_CREAT:
@@ -348,7 +348,7 @@ class Open(Command):
 	def do_DataFromWire(self, data):
 		flags, mode = struct.unpack("<HH", data[:4])
 		path, _ = getCstr(data, 4)
-		
+
 		self.setFlags(flags).setMode(mode).setPath(path)
 
 class OpenResponse(Response):

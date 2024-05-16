@@ -32,7 +32,7 @@ import stat
 import os
 import errno
 
-import tnfs_client
+import tnfs_client3
 
 def getParts(path):
 	if path == '/':
